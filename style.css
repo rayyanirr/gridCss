@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  padding-bottom: 15px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: minmax(300px, 2fr) 3fr;
+  grid-auto-rows: 400px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-info {
+  margin: 0 50px;
+  align-self: center;
+}
+
+.hero-info h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.hero-info p {
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.hero-info button {
+  width: 200px;
+  height: 28px;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero-info button:hover {
+  background-color: #c3352b;
+}
+
+.dishes {
+  margin: 50px 0;
+}
+
+.dishes h2 {
+  margin-bottom: 24px;
+  color: #333;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+  grid-auto-rows: 1fr;
+  gap: 16px;
+  justify-content: center;
+}
+
+.dishes-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dishes-item__big {
+  grid-area: 1/1/3/3;
+}
+
+.menu {
+  margin-bottom: 30px;
+}
+
+.menu-title {
+  margin-bottom: 24px;
+  color: #333;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.menu-grid {
+  display: grid;
+  gap: 25px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 200px));
+}
+
+.menu-item-grid {
+  background-color: #ffedf0;
+  padding: 15px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.menu-item-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+
+  }
+  .hero-image {
+    display: none;
+  }
+
+  .dishes {
+    margin: 8px 0;
+  }
+}
